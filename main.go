@@ -77,6 +77,7 @@ func main() {
 	go allocate(noOfJobs)
 	done := make(chan bool)
 
+	// why cant I put go result(done) after createWorkerPool ???
 	go result(done)
 	noOfWorkders := 10
 	createWorkerPool(noOfWorkders)
